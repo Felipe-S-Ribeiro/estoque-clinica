@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque - Clínica Escola Uninassau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Controle de Estoque</h2>
+
+        <div class="add-product">
+            <h3>Adicionar Produto</h3>
+            <input type="text" id="product-name" placeholder="Nome do Produto">
+            <input type="number" id="product-quantity" placeholder="Quantidade">
+            <input type="number" id="product-price" placeholder="Preço (R$)">
+            <button id="add-product">Adicionar</button>
+        </div>
+
+        <div class="inventory">
+            <h3>Produtos em Estoque</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Quantidade</th>
+                        <th>Preço (R$)</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Produtos serão adicionados dinamicamente aqui -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
