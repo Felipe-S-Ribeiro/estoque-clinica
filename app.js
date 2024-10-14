@@ -70,7 +70,7 @@ function removeProduct(index) {
 }
 
 // Lógica do dashboard
-if (window.location.pathname.includes('dashboard.html')) {
+if (window.location.pathname.includes('index.html')) {
     document.getElementById('add-product').addEventListener('click', function () {
         const productName = document.getElementById('product-name').value;
         const productQuantity = document.getElementById('product-quantity').value;
