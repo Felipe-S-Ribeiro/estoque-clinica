@@ -70,26 +70,27 @@ function removeProduct(index) {
 }
 
 // Lógica do dashboard
-if (window.location.pathname.includes('index.html')) {
-    document.getElementById('add-product').addEventListener('click', function () {
-        const productName = document.getElementById('product-name').value;
-        const productQuantity = document.getElementById('product-quantity').value;
-        const productPrice = document.getElementById('product-price').value;
+document.getElementById('add-product').addEventListener('click', function () {
+    const productName = document.getElementById('product-name').value;
+    const productQuantity = document.getElementById('product-quantity').value;
+    const productPrice = document.getElementById('product-price').value;
 
-        // Verificar se os campos foram preenchidos corretamente
-        if (productName && productQuantity && productPrice) {
-            saveProduct({
-                name: productName,
-                quantity: parseInt(productQuantity),
-                price: parseFloat(productPrice)
-            });
-            document.getElementById('product-name').value = ''; // Limpa o campo
-            document.getElementById('product-quantity').value = ''; // Limpa o campo
-            document.getElementById('product-price').value = ''; // Limpa o campo
-        } else {
-            alert('Por favor, preencha todos os campos!');
-        }
-    });
+    // Verificar se os campos foram preenchidos corretamente
+    if (productName && productQuantity && productPrice) {
+        saveProduct({
+            name: productName,
+            quantity: parseInt(productQuantity),
+            price: parseFloat(productPrice)
+        });
+        document.getElementById('product-name').value = ''; // Limpa o campo
+        document.getElementById('product-quantity').value = ''; // Limpa o campo
+        document.getElementById('product-price').value = ''; // Limpa o campo
+    } else {
+        alert('Por favor, preencha todos os campos!');
+    }
+});
 
-    displayProducts(); // Exibe os produtos ao carregar a página
-}
+// Exibe os produtos ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+    displayProducts();
+});
